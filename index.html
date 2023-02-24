@@ -10,10 +10,6 @@
 
   $(document).ready(init_UI)
 
-  let key = "eeaf92dbc8b43c1330ca243ea2cda2c4"
-  let ville = $("#V").val();
-
-  let query = "https://api.openweathermap.org/data/2.5/forecast?q=" + ville + "&units=metric&appid=" + key
 
   let json;
 
@@ -53,6 +49,11 @@
   }
 
   function RequestData() {
+    let key = "eeaf92dbc8b43c1330ca243ea2cda2c4"
+    let ville = $("#V").val();
+    let query = "https://api.openweathermap.org/data/2.5/forecast?q=" + ville + "&units=metric&appid=" + key
+
+
     $.ajax({
       url: query,
       type : "GET",
